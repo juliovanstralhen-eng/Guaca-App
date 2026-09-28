@@ -1,17 +1,30 @@
 {
-  "name": "Finanzas",
-  "short_name": "Finanzas",
-  "description": "Registra tus gastos e ingresos y mira en qué se va tu plata.",
+  "name": "Guaca · tu plata a todo color",
+  "short_name": "Guaca",
+  "description": "Controla tus gastos, ingresos, pagos y metas a todo color.",
   "lang": "es-CO",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#0B0A09",
-  "theme_color": "#0B0A09",
+  "background_color": "#0D1122",
+  "theme_color": "#0D1122",
   "icons": [
-    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png"},
-    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png"},
-    {"src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
   ]
 }
