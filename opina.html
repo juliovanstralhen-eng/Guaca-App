@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#F3F5FB">
+<title>Guaca · Tu opinión</title>
+<link rel="icon" href="icon-192.png">
+<script>
+  // ▼▼▼ Pega aquí, entre las comillas, el enlace de tu encuesta de Google Forms ▼▼▼
+  var FORM_URL = "https://forms.gle/KTdPmBdqGGLv9j7F8";
+  // ▲▲▲ Nada más que cambiar ▲▲▲
+  if (FORM_URL) location.replace(FORM_URL);
+</script>
+<style>
+@font-face{font-family:"Bricolage";src:url(bricolage-grotesque-latin-800-normal.woff2) format("woff2");font-weight:800;font-display:swap}
+@font-face{font-family:"Instrument";src:url(instrument-sans-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Instrument";src:url(instrument-sans-latin-600-normal.woff2) format("woff2");font-weight:600 700;font-display:swap}
+:root{--bg:#F3F5FB;--panel:#fff;--ink:#141A33;--ink2:#3A4260;--muted:#6B7390;--line:#E0E5F0;--indigo:#4F46E5}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:var(--bg);color:var(--ink);font-family:"Instrument",system-ui,-apple-system,"Segoe UI",sans-serif;display:grid;place-items:center;padding:24px 16px}
+main{width:100%;max-width:520px;background:var(--panel);border-radius:26px;padding:28px 22px;box-shadow:0 20px 50px -20px rgba(20,26,51,.3);text-align:center}
+img{width:76px;height:76px;border-radius:20px;box-shadow:0 14px 30px -10px rgba(79,70,229,.5)}
+h1{font-family:"Bricolage",system-ui,sans-serif;font-weight:800;letter-spacing:-.03em;font-size:30px;line-height:1.05;margin:16px 0 8px}
+p{color:var(--ink2);line-height:1.55;margin:0 0 14px}
+.go{display:block;background:linear-gradient(135deg,#4F46E5,#7C3AED 55%,#DB2777 130%);color:#fff;text-decoration:none;font-weight:700;border-radius:16px;padding:15px;margin-top:8px}
+ol{text-align:left;color:var(--ink2);line-height:1.5;padding-left:22px;margin:6px 0 16px}
+small{color:var(--muted)}
+.hide{display:none}
+</style>
+</head>
+<body>
+<main>
+  <img src="icon-192.png" alt="Guaca">
+  <div id="ok" class="hide">
+    <h1>Abriendo la encuesta…</h1>
+    <p>Si no se abre sola, toca el botón.</p>
+    <a class="go" id="go" href="#">Responder la encuesta</a>
+  </div>
+  <div id="wait">
+    <h1>¡Gracias por probar Guaca!</h1>
+    <p>La encuesta se abre muy pronto. Mientras tanto, puedes mandarme por WhatsApp tu nombre y estas respuestas:</p>
+    <ol>
+      <li>¿Qué fue lo más fácil y lo que más te gustó?</li>
+      <li>¿En qué momento te enredaste o no supiste qué hacer?</li>
+      <li>¿Qué le quitarías o qué te sobra?</li>
+      <li>¿Qué le falta para que la uses todos los días?</li>
+      <li>Del 0 al 10, ¿qué tanto la recomendarías?</li>
+    </ol>
+    <small>Si algo falla, una captura de pantalla me ayuda muchísimo.</small>
+  </div>
+</main>
+<script>
+  if (FORM_URL) {
+    document.getElementById("ok").className = "";
+    document.getElementById("wait").className = "hide";
+    document.getElementById("go").href = FORM_URL;
+  }
+</script>
+</body>
+</html>
