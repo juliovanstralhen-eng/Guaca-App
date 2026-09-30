@@ -1,5 +1,5 @@
 // Guaca: guarda la app en el celular para que abra sin internet.
-const CACHE = "guaca-v12";
+const CACHE = "guaca-v13";
 const FILES = [
   "./", "index.html", "manifest.webmanifest",
   "icon-180.png", "logo.svg", "icon-192.png", "icon-512.png", "icon-maskable-512.png",
