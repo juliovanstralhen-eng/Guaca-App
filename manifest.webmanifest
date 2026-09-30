@@ -1,14 +1,14 @@
 {
-  "name": "Guaca · tu plata a todo color",
+  "name": "Guaca · Cada peso, un tesoro",
   "short_name": "Guaca",
-  "description": "Controla tus gastos, ingresos, pagos y metas a todo color.",
+  "description": "Controla tus gastos, ingresos, pagos y metas. Cada peso, un tesoro.",
   "lang": "es-CO",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#0D1122",
-  "theme_color": "#0D1122",
+  "background_color": "#1F4D2E",
+  "theme_color": "#1F4D2E",
   "icons": [
     {
       "src": "icon-192.png",

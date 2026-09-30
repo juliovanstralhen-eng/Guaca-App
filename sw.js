@@ -1,10 +1,10 @@
 // Guaca: guarda la app en el celular para que abra sin internet.
-const CACHE = "guaca-v10";
+const CACHE = "guaca-v12";
 const FILES = [
   "./", "index.html", "manifest.webmanifest",
   "icon-180.png", "logo.svg", "icon-192.png", "icon-512.png", "icon-maskable-512.png",
-  "bricolage-grotesque-latin-600-normal.woff2", "bricolage-grotesque-latin-700-normal.woff2", "bricolage-grotesque-latin-800-normal.woff2",
-  "instrument-sans-latin-400-normal.woff2", "instrument-sans-latin-500-normal.woff2", "instrument-sans-latin-600-normal.woff2"
+  "plus-jakarta-sans-latin-400-normal.woff2", "plus-jakarta-sans-latin-500-normal.woff2", "plus-jakarta-sans-latin-600-normal.woff2",
+  "plus-jakarta-sans-latin-700-normal.woff2", "plus-jakarta-sans-latin-800-normal.woff2", "intro.mp3"
 ];
 self.addEventListener("install", e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES.map(f => new Request(f, {cache: "reload"}))))); self.skipWaiting(); });
 self.addEventListener("activate", e => {
@@ -13,7 +13,7 @@ self.addEventListener("activate", e => {
 });
 self.addEventListener("fetch", e => {
   const u = new URL(e.request.url);
-  if (e.request.method !== "GET" || u.origin !== location.origin) return;
+  if (e.request.method !== "GET" || u.origin !== location.origin || e.request.headers.has("range")) return;
   // La encuesta y la presentación siempre se leen de internet (así se ven los cambios al instante).
   if (/(opina|presentacion)\.html$/.test(u.pathname)) return;
   // Muestra lo guardado al instante y actualiza en segundo plano.
